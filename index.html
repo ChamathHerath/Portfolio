@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Chamath Herath - Computer Science undergraduate, Full Stack Web Developer, and UI/UX Designer portfolio." />
+    <meta name="theme-color" content="#0B1120" />
+    <meta property="og:title" content="Chamath Herath | Portfolio" />
+    <meta property="og:description" content="Premium portfolio for Chamath Herath, undergraduate in Computer Science and Software Engineering at SLIIT." />
+    <meta property="og:type" content="website" />
+    <title>Chamath Herath | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="page-loader" id="loader" aria-hidden="true">
+      <div class="loader-orbit"></div>
+      <div class="loader-text">Loading portfolio</div>
+    </div>
+
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+    <div class="particles" id="particles" aria-hidden="true"></div>
+
+    <header class="nav-shell">
+      <nav class="navbar" aria-label="Primary">
+        <a class="brand" href="#home" aria-label="Chamath Herath home">CH</a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <button class="theme-toggle magnetic" id="themeToggle" type="button" aria-label="Toggle theme">
+            <span class="theme-icon">◐</span>
+          </button>
+          <a class="button button-primary magnetic" href="#contact">Hire Me</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <span class="eyebrow">Aspiring Full Stack Web Developer • UI/UX Designer</span>
+            <h1>Chamath Herath</h1>
+            <p class="typing-wrap"><span class="typing-label">I build for</span> <span class="typing" id="typingText"></span></p>
+            <p class="hero-description">
+              I am a Computer Science and Software Engineering undergraduate at SLIIT with a passion for developing modern web applications and creating intuitive user experiences. I enjoy solving real-world problems through technology while continuously improving my skills in software engineering and web development.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary magnetic ripple" href="cv/chamath-herath-cv.html" download="Chamath-Herath-CV.html">Download CV</a>
+              <a class="button button-secondary magnetic ripple" href="#projects">View Projects</a>
+              <a class="button button-ghost magnetic ripple" href="#contact">Contact Me</a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-card glass">
+                <strong data-count="15">0</strong>
+                <span>Projects</span>
+              </div>
+              <div class="stat-card glass">
+                <strong data-count="3">0</strong>
+                <span>Core Focus Areas</span>
+              </div>
+              <div class="stat-card glass">
+                <strong data-count="100">0</strong>
+                <span>Learning Mindset</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="visual-ring"></div>
+            <div class="profile-card glass floating">
+              <img
+                class="profile-photo"
+                src="https://i.postimg.cc/J7bC5zLr/Whats-App-Image-2026-08-05-at-22-46-13.jpg"
+                alt="Portrait illustration for Chamath Herath"
+                loading="eager"
+              />
+              <div class="profile-glow"></div>
+              <div class="profile-badges">
+                <span>Full Stack</span>
+                <span>UI/UX</span>
+                <span>SLIIT</span>
+              </div>
+            </div>
+            <div class="floating-card glass floating delay-1">
+              <span class="mini-label">Current Year</span>
+              <strong>2nd Year, 2nd Semester</strong>
+            </div>
+            <div class="floating-card glass floating delay-2">
+              <span class="mini-label">Availability</span>
+              <strong>Open to Internships</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal-section" id="about">
+        <div class="section-heading">
+          <span>About Me</span>
+          <h2>Professional overview</h2>
+        </div>
+        <div class="about-grid">
+          <div class="glass about-copy reveal">
+            <p>
+              I’m Chamath Herath, an undergraduate pursuing a BSc (Hons) in Computer Science and Software Engineering at Sri Lanka Institute of Information Technology, Pallekele. I’m focused on becoming a well-rounded software professional who can build reliable products from concept to deployment.
+            </p>
+            <p>
+              My career objective is to grow into a full stack developer who understands both the technical and human side of product creation. I care about clean architecture, responsive interfaces, and thoughtful UI/UX decisions that make applications easy to use and visually memorable.
+            </p>
+            <p>
+              I enjoy learning continuously, experimenting with modern tools, and turning ideas into polished digital experiences. I’m especially interested in web development, design systems, and building scalable applications that solve meaningful problems.
+            </p>
+          </div>
+          <div class="info-grid reveal">
+            <article class="info-card glass"><span>Name</span><strong>Chamath Herath</strong></article>
+            <article class="info-card glass"><span>Degree</span><strong>BSc (Hons) in Computer Science and Software Engineering</strong></article>
+            <article class="info-card glass"><span>University</span><strong>SLIIT, Pallekele</strong></article>
+            <article class="info-card glass"><span>Current Year</span><strong>2nd Year, 2nd Semester</strong></article>
+            <article class="info-card glass"><span>Location</span><strong>Kandy, Sri Lanka</strong></article>
+            <article class="info-card glass"><span>Email</span><strong>chamathsathsara641@gmail.com</strong></article>
+            <article class="info-card glass"><span>Languages</span><strong>English, Sinhala</strong></article>
+            <article class="info-card glass highlight-card"><span>Availability</span><strong>Open to Internships</strong></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal-section" id="education">
+        <div class="section-heading">
+          <span>Education</span>
+          <h2>Academic timeline</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item glass reveal">
+            <div class="timeline-dot"></div>
+            <div>
+              <span class="timeline-year">2024 – Present</span>
+              <h3>BSc (Hons) in Computer Science and Software Engineering</h3>
+              <p>Sri Lanka Institute of Information Technology (SLIIT), Pallekele</p>
+              <p class="timeline-status">Current Status: 2nd Year, 2nd Semester</p>
+            </div>
+          </article>
+          <article class="timeline-item glass reveal delay-1">
+            <div class="timeline-dot"></div>
+            <div>
+              <span class="timeline-year">2023 – 2024</span>
+              <h3>Foundation Program</h3>
+              <p>CCL Academy</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal-section" id="skills">
+        <div class="section-heading">
+          <span>Skills</span>
+          <h2>Technical stack and strengths</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="glass reveal skill-panel">
+            <h3>Programming Languages</h3>
+            <div class="bar-list" data-skill-bars>
+              <div class="bar-item"><span>HTML</span><div class="bar"><i style="--value: 96%"></i></div></div>
+              <div class="bar-item"><span>CSS</span><div class="bar"><i style="--value: 94%"></i></div></div>
+              <div class="bar-item"><span>JavaScript</span><div class="bar"><i style="--value: 88%"></i></div></div>
+              <div class="bar-item"><span>PHP</span><div class="bar"><i style="--value: 82%"></i></div></div>
+              <div class="bar-item"><span>Java</span><div class="bar"><i style="--value: 76%"></i></div></div>
+              <div class="bar-item"><span>C++</span><div class="bar"><i style="--value: 72%"></i></div></div>
+              <div class="bar-item"><span>Python</span><div class="bar"><i style="--value: 78%"></i></div></div>
+            </div>
+          </div>
+          <div class="skills-cards">
+            <article class="glass reveal"><h3>Frontend</h3><p>HTML5, CSS3, Bootstrap, Tailwind CSS, React</p></article>
+            <article class="glass reveal delay-1"><h3>Backend</h3><p>PHP, Node.js</p></article>
+            <article class="glass reveal delay-2"><h3>Database</h3><p>MySQL, MongoDB</p></article>
+            <article class="glass reveal"><h3>Tools</h3><p>GitHub, VS Code, Figma, Blender</p></article>
+            <article class="glass reveal delay-1"><h3>Other</h3><p>UI/UX Design, Responsive Web Design, OOP, Database Design, Web Development</p></article>
+          </div>
+        </div>
+        <div class="skill-circles reveal">
+          <div class="circle-card glass" style="--percent: 92"><div><strong>92%</strong><span>UI Craft</span></div></div>
+          <div class="circle-card glass" style="--percent: 88"><div><strong>88%</strong><span>Frontend</span></div></div>
+          <div class="circle-card glass" style="--percent: 84"><div><strong>84%</strong><span>Problem Solving</span></div></div>
+          <div class="circle-card glass" style="--percent: 80"><div><strong>80%</strong><span>Backend Logic</span></div></div>
+        </div>
+      </section>
+
+      <section class="section reveal-section" id="services">
+        <div class="section-heading">
+          <span>Services</span>
+          <h2>What I can help with</h2>
+        </div>
+        <div class="services-grid">
+          <article class="glass service-card reveal">
+            <div class="service-icon">⟡</div>
+            <h3>Full Stack Web Development</h3>
+            <p>Develop complete web applications using modern frontend and backend technologies.</p>
+          </article>
+          <article class="glass service-card reveal delay-1">
+            <div class="service-icon">◌</div>
+            <h3>UI/UX Design</h3>
+            <p>Create clean, user-friendly, and visually appealing digital experiences.</p>
+          </article>
+          <article class="glass service-card reveal delay-2">
+            <div class="service-icon">✦</div>
+            <h3>Website Maintenance</h3>
+            <p>Maintain, optimize, update, and improve website performance and functionality.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal-section" id="projects">
+        <div class="section-heading">
+          <span>Featured Project</span>
+          <h2>A sustainable commerce experience</h2>
+        </div>
+        <article class="featured-project glass reveal">
+          <div class="project-visual">
+            <div class="mockup-window">
+              <div class="mockup-bar">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="mockup-content">
+                <div class="mockup-card hero-mockup">
+                  <div class="mockup-tag">Eco-Shop</div>
+                  <div class="mockup-lines"></div>
+                  <div class="mockup-grid"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-copy">
+            <span class="project-label">Featured Project</span>
+            <h3>Eco-Shop</h3>
+            <p>A full-stack e-commerce platform focused on eco-friendly and sustainable products.</p>
+            <div class="badge-row">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+            </div>
+            <ul class="feature-list">
+              <li>User Authentication</li>
+              <li>Product Catalog</li>
+              <li>Shopping Cart</li>
+              <li>Responsive Design</li>
+              <li>Clean UI</li>
+              <li>Database Integration</li>
+            </ul>
+            <div class="project-actions">
+              <a class="button button-primary magnetic ripple" href="https://github.com/ChamathHerath" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="button button-secondary magnetic ripple" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section reveal-section" id="why-me">
+        <div class="section-heading">
+          <span>Why Choose Me</span>
+          <h2>What makes my work stand out</h2>
+        </div>
+        <div class="why-grid">
+          <article class="glass feature-card reveal">Clean Code</article>
+          <article class="glass feature-card reveal delay-1">Responsive Design</article>
+          <article class="glass feature-card reveal delay-2">User-Centered Design</article>
+          <article class="glass feature-card reveal">Modern UI</article>
+          <article class="glass feature-card reveal delay-1">Problem Solving</article>
+          <article class="glass feature-card reveal delay-2">Fast Learning</article>
+          <article class="glass feature-card reveal">Team Collaboration</article>
+          <article class="glass feature-card reveal delay-1">Continuous Improvement</article>
+        </div>
+      </section>
+
+      <section class="section reveal-section contact-section" id="contact">
+        <div class="section-heading">
+          <span>Contact</span>
+          <h2>Let’s build something useful</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="glass contact-card reveal">
+            <div class="contact-details">
+              <div>
+                <span>Email</span>
+                <strong><a href="mailto:chamathsathsara641@gmail.com">chamathsathsara641@gmail.com</a></strong>
+              </div>
+              <div>
+                <span>Location</span>
+                <strong>Kandy, Sri Lanka</strong>
+              </div>
+              <div>
+                <span>GitHub</span>
+                <strong><a href="https://github.com/ChamathHerath" target="_blank" rel="noreferrer">ChamathHerath</a></strong>
+              </div>
+              <div>
+                <span>LinkedIn</span>
+                <strong>Coming Soon</strong>
+              </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="Your email" required />
+              </label>
+              <label>
+                <span>Subject</span>
+                <input type="text" name="subject" placeholder="Project inquiry" required />
+              </label>
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="5" placeholder="Tell me about your idea" required></textarea>
+              </label>
+              <button class="button button-primary ripple" type="submit">Send Message</button>
+              <p class="form-status" id="formStatus" aria-live="polite"></p>
+            </form>
+          </div>
+          <div class="glass map-card reveal delay-1">
+            <iframe
+              title="Map of Kandy, Sri Lanka"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=80.5865%2C7.2637%2C80.6828%2C7.3303&layer=mapnik&marker=7.2906%2C80.6337"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="scroll-top" id="scrollTop" type="button" aria-label="Scroll to top">↑</button>
+
+    <footer class="footer">
+      <div>
+        <a class="footer-brand" href="#home">Chamath Herath</a>
+        <p>Full Stack Web Developer • UI/UX Designer</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/ChamathHerath" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="#">LinkedIn</a>
+      </div>
+      <p>© 2026 Chamath Herath. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
