@@ -81,17 +81,20 @@ function setupTheme() {
 
 function animateCounters() {
   countTargets.forEach((item) => {
+    if (item.dataset.animated === 'true') return;
     const target = Number(item.dataset.count || 0);
+    const suffix = item.dataset.suffix || '';
     const duration = 1200;
     const startedAt = performance.now();
 
     function tick(now) {
       const progress = Math.min((now - startedAt) / duration, 1);
-      item.textContent = Math.round(target * progress);
+      const value = Math.round(target * progress);
+      item.textContent = value + (progress === 1 ? suffix : '');
       if (progress < 1) {
         requestAnimationFrame(tick);
-      } else if (target === 100) {
-        item.textContent = '100%';
+      } else {
+        item.dataset.animated = 'true';
       }
     }
 
