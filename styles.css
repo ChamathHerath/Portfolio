@@ -1,28 +1,28 @@
 :root {
-  --bg: #0b1120;
-  --bg-elevated: rgba(11, 17, 32, 0.72);
-  --surface: rgba(15, 23, 42, 0.68);
-  --surface-strong: rgba(15, 23, 42, 0.9);
-  --border: rgba(148, 163, 184, 0.16);
-  --text: #e5eefc;
-  --muted: #9fb0cc;
-  --primary: #3b82f6;
-  --secondary: #06b6d4;
-  --highlight: #8b5cf6;
-  --success: #10b981;
-  --shadow: 0 24px 80px rgba(2, 6, 23, 0.38);
-  --radius: 24px;
+  --bg: #000000;
+  --bg-elevated: rgba(0, 0, 0, 0.75);
+  --surface: rgba(12, 12, 12, 0.78);
+  --surface-strong: rgba(18, 18, 18, 0.94);
+  --border: rgba(255, 255, 255, 0.06);
+  --text: #ffffff;
+  --muted: #bfbfbf;
+  --primary: #ef4444; /* vivid red */
+  --secondary: #b91c1c; /* darker red */
+  --highlight: #ffffff;
+  --success: #ef4444;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+  --radius: 20px;
 }
 
 html[data-theme="light"] {
-  --bg: #eef4ff;
-  --bg-elevated: rgba(255, 255, 255, 0.75);
-  --surface: rgba(255, 255, 255, 0.72);
-  --surface-strong: rgba(255, 255, 255, 0.94);
-  --border: rgba(15, 23, 42, 0.12);
-  --text: #0f172a;
-  --muted: #43516b;
-  --shadow: 0 24px 80px rgba(76, 110, 160, 0.18);
+  --bg: #fff;
+  --bg-elevated: rgba(255, 255, 255, 0.95);
+  --surface: rgba(255, 255, 255, 0.98);
+  --surface-strong: rgba(255, 255, 255, 1);
+  --border: rgba(0, 0, 0, 0.06);
+  --text: #0b0b0b;
+  --muted: #4b4b4b;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.06);
 }
 
 * {
@@ -37,10 +37,9 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 30%),
-    radial-gradient(circle at 80% 15%, rgba(6, 182, 212, 0.15), transparent 24%),
-    radial-gradient(circle at 30% 75%, rgba(139, 92, 246, 0.12), transparent 26%),
-    linear-gradient(180deg, rgba(11, 17, 32, 0.94), rgba(4, 8, 18, 1));
+    radial-gradient(circle at 10% 8%, rgba(255,255,255,0.02), transparent 18%),
+    radial-gradient(circle at 85% 12%, rgba(255,255,255,0.01), transparent 14%),
+    linear-gradient(180deg, rgba(0,0,0,1), rgba(8,8,8,1));
   color: var(--text);
   min-height: 100vh;
   overflow-x: hidden;
@@ -48,10 +47,9 @@ body {
 
 html[data-theme="light"] body {
   background:
-    radial-gradient(circle at top left, rgba(59, 130, 246, 0.13), transparent 30%),
-    radial-gradient(circle at 80% 15%, rgba(6, 182, 212, 0.12), transparent 24%),
-    radial-gradient(circle at 30% 75%, rgba(139, 92, 246, 0.08), transparent 26%),
-    linear-gradient(180deg, #f5f8ff, #e7effd);
+    radial-gradient(circle at 10% 8%, rgba(0,0,0,0.02), transparent 18%),
+    radial-gradient(circle at 85% 12%, rgba(0,0,0,0.01), transparent 14%),
+    linear-gradient(180deg, #ffffff, #f7f7f7);
 }
 
 body::before {
@@ -291,7 +289,7 @@ textarea {
 
 /* Gradient treatment for the displayed name */
 .name-gradient {
-  background: linear-gradient(90deg,#6ee7b7 0%, #60a5fa 35%, #c084fc 75%);
+  background: linear-gradient(90deg,#ffffff 0%, #ef4444 50%, #ffffff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -327,8 +325,8 @@ textarea {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: linear-gradient(90deg,#34d399,#60a5fa);
-  box-shadow: 0 6px 18px rgba(52,211,153,0.12);
+  background: linear-gradient(90deg,#ef4444,var(--secondary));
+  box-shadow: 0 6px 18px rgba(239,68,68,0.12);
 }
 
 .typing-wrap {
@@ -556,7 +554,7 @@ textarea {
   font-weight: 800;
   font-size: 2.4rem;
   line-height: 1;
-  background: linear-gradient(90deg,#6ee7b7 0%, #60a5fa 45%, #c084fc 90%);
+  background: linear-gradient(90deg, #ffffff 0%, var(--primary) 60%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -722,15 +720,15 @@ textarea {
 }
 
 .badge.in-progress {
-  background: linear-gradient(90deg, rgba(52,211,153,0.14), rgba(34,197,94,0.12));
-  color: #10b981;
-  border: 1px solid rgba(16,185,129,0.12);
+  background: linear-gradient(90deg, rgba(239,68,68,0.10), rgba(185,28,28,0.08));
+  color: var(--primary);
+  border: 1px solid rgba(239,68,68,0.10);
 }
 
 .badge.completed {
-  background: linear-gradient(90deg, rgba(96,165,250,0.06), rgba(139,92,246,0.06));
-  color: #60a5fa;
-  border: 1px solid rgba(96,165,250,0.06);
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  color: var(--muted);
+  border: 1px solid rgba(255,255,255,0.03);
 }
 
 .skills-grid {
@@ -878,24 +876,18 @@ textarea {
   overflow: hidden;
   background: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(3, 7, 18, 0.95));
   border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
 }
 
-.mockup-bar {
-  display: flex;
-  gap: 8px;
-  padding: 14px 16px;
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.mockup-bar span {
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: rgba(148, 163, 184, 0.45);
-}
-
+.mockup-bar,
+.mockup-card,
 .mockup-content {
+  position: relative;
+  z-index: 2;
+}
   padding: 18px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-mockup {
@@ -910,6 +902,23 @@ textarea {
   overflow: hidden;
 }
 
+.mockup-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 0;
+}
+
+.mockup-bar,
+.mockup-card,
+.mockup-content {
+  position: relative;
+  z-index: 2;
+}
+
 .mockup-tag {
   position: absolute;
   left: 24px;
@@ -921,6 +930,24 @@ textarea {
   font-weight: 700;
 }
 
+
+.mockup-card .mockup-screenshot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.9) contrast(0.9) brightness(0.95);
+  z-index: 0;
+}
+
+.mockup-card .mockup-tag,
+.mockup-card .mockup-lines,
+.mockup-card .mockup-grid {
+  position: relative;
+  z-index: 2;
+}
 .mockup-lines,
 .mockup-grid {
   position: absolute;

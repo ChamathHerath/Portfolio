@@ -215,7 +215,7 @@ function setupScrollTop() {
 
 function setupIntroAnimations() {
   createParticles();
-  typeLoop();
+  if (typingText) typeLoop();
   setupTheme();
   revealSections();
   setupCursorGlow();
