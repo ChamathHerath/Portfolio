@@ -102,6 +102,54 @@ function animateCounters() {
   });
 }
 
+function animateSkillCircles(section) {
+  const circles = section.querySelectorAll('.circle-card[data-percent]');
+
+  circles.forEach((circle, index) => {
+    if (circle.dataset.animated === 'true') return;
+
+    const target = Number(circle.dataset.percent || 0);
+    const ring = circle.querySelector('.circle-ring');
+    const valueNode = circle.querySelector('strong');
+    const duration = 1300;
+    const startDelay = index * 140;
+    const startedAt = performance.now() + startDelay;
+
+    circle.style.setProperty('--progress', 0);
+
+    function tick(now) {
+      if (now < startedAt) {
+        requestAnimationFrame(tick);
+        return;
+      }
+
+      const progress = Math.min((now - startedAt) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(target * eased);
+
+      circle.style.setProperty('--progress', String(current));
+      if (valueNode) {
+        valueNode.textContent = `${current}%`;
+      }
+
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      } else {
+        circle.dataset.animated = 'true';
+        circle.style.setProperty('--progress', String(target));
+        if (valueNode) {
+          valueNode.textContent = `${target}%`;
+        }
+        if (ring) {
+          ring.classList.add('circle-ring-active');
+        }
+      }
+    }
+
+    requestAnimationFrame(tick);
+  });
+}
+
 function revealSections() {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -111,6 +159,7 @@ function revealSections() {
           if (entry.target.classList.contains('reveal-section')) {
             const bars = entry.target.querySelectorAll('.bar i');
             bars.forEach((bar) => bar.closest('.skills-grid')?.classList.add('skills-animate'));
+            animateSkillCircles(entry.target);
           }
           const counters = entry.target.querySelectorAll('[data-count]');
           if (counters.length) {
