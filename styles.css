@@ -1045,15 +1045,46 @@ textarea {
 
 .why-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
 }
 
 .feature-card {
-  min-height: 100px;
-  display: grid;
-  place-items: center;
-  text-align: center;
+  min-height: 260px;
+  padding: 28px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
   font-size: 1rem;
   color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 22px;
+  background: rgba(17, 24, 39, 0.55);
+}
+
+.feature-card .feature-number {
+  margin-bottom: 20px;
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.feature-card h3 {
+  margin: 0 0 14px;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  font-family: "Poppins", sans-serif;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 1rem;
 }
 
 .contact-grid {
