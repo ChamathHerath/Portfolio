@@ -239,6 +239,44 @@ function setupNav() {
   });
 }
 
+async function copyTextToClipboard(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+
+  const helper = document.createElement('textarea');
+  helper.value = text;
+  helper.setAttribute('readonly', '');
+  helper.style.position = 'fixed';
+  helper.style.opacity = '0';
+  document.body.appendChild(helper);
+  helper.select();
+  document.execCommand('copy');
+  document.body.removeChild(helper);
+}
+
+function setupEmailCopy() {
+  document.querySelectorAll('.copy-email').forEach((link) => {
+    link.addEventListener('click', async (event) => {
+      event.preventDefault();
+      const email = link.dataset.email || link.textContent.trim();
+      const originalText = link.textContent;
+
+      try {
+        await copyTextToClipboard(email);
+        link.textContent = 'Email copied!';
+      } catch (error) {
+        link.textContent = 'Copy failed';
+      }
+
+      setTimeout(() => {
+        link.textContent = originalText;
+      }, 1400);
+    });
+  });
+}
+
 function setupForm() {
   contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -271,6 +309,7 @@ function setupIntroAnimations() {
   setupMagneticButtons();
   setupRipples();
   setupNav();
+  setupEmailCopy();
   setupForm();
   setupLoader();
   setupScrollTop();
