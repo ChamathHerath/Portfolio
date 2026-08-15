@@ -913,6 +913,42 @@ textarea {
   padding: 18px;
 }
 
+.professional-skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  padding: 22px;
+  margin-top: 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  align-items: center;
+}
+
+.professional-skills-copy {
+  padding: 14px 8px;
+}
+
+.professional-skills-copy h3 {
+  margin: 10px 0 14px;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  letter-spacing: -0.04em;
+}
+
+.project-title-link {
+  display: inline-block;
+  color: var(--text);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.project-title-link:hover {
+  opacity: 0.85;
+  transform: translateX(2px);
+}
+
+.project-title-link h3 {
+  margin: 0;
+}
+
 .project-visual {
   padding: 10px;
 }
