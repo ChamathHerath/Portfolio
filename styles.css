@@ -914,24 +914,38 @@ textarea {
 }
 
 .professional-skills {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-  padding: 22px;
+  display: block;
   margin-top: 28px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  align-items: center;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .professional-skills-copy {
-  padding: 14px 8px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.professional-skills-copy .project-label {
+  display: inline-block;
+  color: var(--primary);
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 0;
 }
 
 .professional-skills-copy h3 {
-  margin: 10px 0 14px;
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  letter-spacing: -0.04em;
+  margin: 0;
+  font-size: clamp(2.6rem, 6vw, 6rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+  font-weight: 800;
+  color: #ffffff;
 }
 
 .project-title-link {
