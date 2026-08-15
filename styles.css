@@ -908,32 +908,61 @@ textarea {
 }
 
 .featured-project {
-  grid-template-columns: 0.95fr 1.05fr;
-  align-items: center;
-  padding: 18px;
+  display: block;
+  padding: 24px 18px 18px;
+  margin-bottom: 28px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(14, 20, 28, 0.92), rgba(9, 14, 20, 0.9));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+}
+
+.project-copy {
+  width: 100%;
+  display: grid;
+  gap: 14px;
+}
+
+.project-copy .project-label {
+  display: inline-block;
+  color: var(--primary);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 0;
+}
+
+.project-copy h3 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 5rem);
+  line-height: 0.94;
+  letter-spacing: -0.06em;
+  font-weight: 800;
+  color: #ffffff;
 }
 
 .professional-skills {
   display: block;
   margin-top: 28px;
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
+  padding: 24px 18px 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(14, 20, 28, 0.92), rgba(9, 14, 20, 0.9));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
 }
 
 .professional-skills-copy {
   padding: 0;
   display: grid;
-  gap: 12px;
+  gap: 14px;
 }
 
 .professional-skills-copy .project-label {
   display: inline-block;
   color: var(--primary);
-  font-size: 0.76rem;
-  letter-spacing: 0.14em;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 800;
   margin: 0;
@@ -941,8 +970,8 @@ textarea {
 
 .professional-skills-copy h3 {
   margin: 0;
-  font-size: clamp(2.6rem, 6vw, 6rem);
-  line-height: 0.96;
+  font-size: clamp(2.4rem, 5vw, 5rem);
+  line-height: 0.94;
   letter-spacing: -0.06em;
   font-weight: 800;
   color: #ffffff;
@@ -1074,7 +1103,7 @@ textarea {
 
 .project-copy h3 {
   margin: 6px 0 12px;
-  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  font-size: 36px;
 }
 
 .badge-row,
