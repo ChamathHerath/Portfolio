@@ -1174,6 +1174,34 @@ textarea {
   line-height: 1.7;
 }
 
+.activity-focus-multi {
+  grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.7fr);
+}
+
+.activity-focus-gallery {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  grid-auto-rows: 210px;
+  gap: 12px;
+}
+
+.activity-focus-gallery .activity-focus-photo {
+  height: 100%;
+}
+
+.activity-focus-gallery .activity-focus-photo:first-child {
+  grid-row: span 2;
+}
+
+.activity-focus-gallery .activity-focus-photo img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.activity-focus-gallery .activity-focus-photo figcaption {
+  font-size: 0.85rem;
+}
+
 .activity-write-placeholder {
   margin-top: 14px;
   padding: 14px;
@@ -1541,6 +1569,10 @@ textarea {
   }
 
   .activity-focus {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-focus-gallery {
     grid-template-columns: 1fr;
   }
 
